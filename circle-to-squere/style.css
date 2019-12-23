@@ -1,0 +1,48 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(20, 20, 20);
+}
+
+.wait {
+    display: block;
+    position: absolute;
+    top: 40%;
+    bottom: 50%;
+    right: 50%;
+    left: 45%;
+    height: 100px;
+    width: 100px;
+    border: 10px rgb(14, 169, 155) solid;
+    animation: waitAnimation2 5s infinite ease;
+}
+
+@keyframes waitAnimation2 {
+    0% {
+        transform: rotate(0deg) scale(0.5);
+        border-radius: 50%;
+        border-color: radial-gradient( slateblue, seagreen);
+    }
+    50% {
+        transform: rotate(180deg) scale(2);
+        border-radius: 0%;
+        border-color: radial-gradient( seagreen, slateblue);
+    }
+    100% {
+        transform: rotate(360deg) scale(0.5);
+        border-radius: 50%;
+        border-color: radial-gradient( slateblue, seagreen);
+    }
+}
+
+@keyframes waitAnimation1 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

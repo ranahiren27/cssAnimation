@@ -1,0 +1,100 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(20, 20, 20);
+}
+
+.cup {
+    display: block;
+    position: absolute;
+    height: 150px;
+    width: 100px;
+    border: 5px solid white;
+    transform: translate(700px, 300px);
+    border-top: 0px;
+    border-radius: 1px 1px 10px 10px;
+    z-index: 1;
+}
+
+.handle {
+    height: 60px;
+    width: 40px;
+    border: 5px solid white;
+    transform: translate(805px, 323px);
+    position: absolute;
+    border-radius: 20% 40% 40% 20%;
+    z-index: 1;
+}
+
+@keyframes waterAnimation {
+    0% {
+        height: 0px;
+    }
+    50% {
+        height: 150px;
+    }
+    100% {
+        height: 0px;
+    }
+}
+
+.drop:before {
+    width: 300px;
+    height: 10px;
+    background: #aaaaaa;
+    display: block;
+    position: fixed;
+    top: 30px;
+    left: 25px;
+    position: relative;
+    transform: translate(430px, 141px);
+}
+
+.drop:after {
+    display: block;
+    content: "";
+    background: #2e8ece;
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    left: 315px;
+    animation: drop 3s ease infinite;
+    border-radius: 50%;
+    transform: scale(0.7, 1) rotate(45deg);
+    box-shadow: 1px 1px 7px #1a1a1a;
+    position: relative;
+    transform: translate(430px, 141px);
+}
+
+@-webkit-keyframes drop {
+    0% {
+        transform: scale(0.1, 0.1) rotate(45deg);
+        top: 25px;
+        border-top-left-radius: 50%;
+    }
+    90% {
+        top: 42px;
+        border-top-left-radius: 0;
+    }
+    95% {
+        border-top-left-radius: 0;
+        transform: scale(0.7, 1) rotate(45deg);
+    }
+    100% {
+        top: 300px;
+        border-top-left-radius: 50%;
+        transform: scale(3, 0.1) rotate(45deg);
+    }
+}
+
+.water {
+    display: block;
+    position: fixed;
+    height: 20px;
+    width: 20px;
+    border: 0px;
+    top: -89px;
+    left: 49px;
+    border-radius: ;
+    background-color: rgb(14, 169, 155);
+}

@@ -1,0 +1,49 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(20, 20, 20);
+}
+
+.tri {
+    width: 0;
+    height: 0;
+    border-right: 60px solid transparent;
+    border-bottom: 60px solid #50f197b3;
+    border-left: 60px solid transparent;
+    position: fixed;
+    transform: translate(731px, 295px);
+    animation: triAnimation 5s infinite;
+}
+
+@keyframes triAnimation {
+    0% {
+        border-bottom: 60px solid transparent;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-top: 0px solid #50f197b3;
+    }
+    25% {
+        border-bottom: 60px solid transparent;
+        border-left: 60px solid transparent;
+        border-right: 0px solid #ecd909e7;
+        border-top: 60px solid transparent;
+    }
+    50% {
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 0px solid #e63516b3;
+        border-top: 60px solid transparent;
+    }
+    75% {
+        border-left: 0px solid #14d4e2f6;
+        border-right: 60px solid transparent;
+        border-bottom: 60px solid transparent;
+        border-top: 60px solid transparent;
+    }
+    100% {
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 60px solid transparent;
+        border-top: 0px solid #50f197b3;
+    }
+}
